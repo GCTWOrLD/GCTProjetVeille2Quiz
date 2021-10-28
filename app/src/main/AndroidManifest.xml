@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetVeille2Quiz">
         <activity
+            android:name=".Quiz"
+            android:exported="false" />
+        <activity
             android:name=".Historique"
             android:exported="false" />
         <activity

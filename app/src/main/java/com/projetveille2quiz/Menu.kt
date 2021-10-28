@@ -16,23 +16,26 @@ class Menu : AppCompatActivity() {
         user = intent.getStringExtra(Constantes.USER)
         nom_user.text = "Bonjour " + user + " !"
 
-        /*btn_novice.setOnClickListener{
-            val intent = Intent(this, QuizNovice::class.java)
+        btn_novice.setOnClickListener{
+            val intent = Intent(this, Quiz::class.java)
+            intent.putExtra("difficulte", "Novice")
             startActivity(intent)
             finish()
         }
 
         btn_inter.setOnClickListener{
-            val intent = Intent(this, QuizInter::class.java)
+            val intent = Intent(this, Quiz::class.java)
+            intent.putExtra("difficulte", "Inter")
             startActivity(intent)
             finish()
         }
 
         btn_expert.setOnClickListener{
-            val intent = Intent(this, QuizExpert::class.java)
+            val intent = Intent(this, Quiz::class.java)
+            intent.putExtra("difficulte", "Expert")
             startActivity(intent)
             finish()
-        }*/
+        }
 
         btn_lb.setOnClickListener {
             val intent = Intent(this, Leaderboard::class.java)
