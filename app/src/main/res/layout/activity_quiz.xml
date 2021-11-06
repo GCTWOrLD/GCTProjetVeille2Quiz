@@ -12,8 +12,9 @@
         android:id="@+id/nom_app"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginTop="15dp"
+        android:padding="15dp"
         android:text="Quiz App GCT"
         android:textColor="@color/purple_500"
         android:textSize="30sp"
@@ -25,25 +26,78 @@
         android:orientation="vertical"
         android:padding="15dp">
         <TextView
-            android:id="@+id/diff_quiz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="15dp"
-            android:text="Difficulte"
-            android:textSize="20sp"
-            android:textColor="@color/purple_500"
-            android:textStyle="bold"/>
-        <TextView
             android:id="@+id/question_quiz"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:layout_marginBottom="25dp"
             android:text="Question"
             android:textSize="20sp"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/black"
             android:textStyle="bold"/>
+        <Button
+            android:id="@+id/choix1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="17sp"
+            android:text="choix1"/>
+        <Button
+            android:id="@+id/choix2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="17sp"
+            android:text="choix2"/>
+        <Button
+            android:id="@+id/choix3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="17sp"
+            android:text="choix3"/>
+        <Button
+            android:id="@+id/choix4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="17sp"
+            android:text="choix4"/>
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="20"
+            android:minHeight="50dp"
+            android:progress="0"
+            android:indeterminate="false"/>
+        <TextView
+            android:id="@+id/progress_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Question 0/20"/>
     </LinearLayout>
 
 </LinearLayout>
