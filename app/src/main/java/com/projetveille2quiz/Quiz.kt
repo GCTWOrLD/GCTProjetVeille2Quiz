@@ -1,5 +1,6 @@
 package com.projetveille2quiz
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_quiz.*
 
 class Quiz : AppCompatActivity() {
 
+    private var user: String? = null
     private var difficulte: String? = null
     private var position = 1
     private var reponseUser: Int? = null
@@ -18,12 +20,13 @@ class Quiz : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
 
+        user = intent.getStringExtra("user")
         difficulte = intent.getStringExtra("difficulte")
 
         if (difficulte == "Novice")  {
             setQuestionNovice()
             choixNovice()
-        } else if (difficulte == "Inter") {
+        } else if (difficulte == "Intermédiaire") {
             setQuestionInter()
             choixInter()
         } else if (difficulte == "Expert") {
@@ -72,48 +75,57 @@ class Quiz : AppCompatActivity() {
     private fun choixNovice() {
         choix1.setOnClickListener {
             reponseUser = 1
-            /*if (reponseUser == listeQuestions!!.get(position - 1).reponse) {
+            if (reponseUser == Constantes.getQuestionsNovice()[position - 1].reponse) {
                 points++
-            }*/
+            }
             position++
             when{
                 position <= totalQuestions ->{
                     setQuestionNovice()
                 }else ->{
-                Toast.makeText(this, "Quiz terminé!", Toast.LENGTH_SHORT).show()
+                    sendIntentNovice()
                 }
             }
         }
         choix2.setOnClickListener {
             reponseUser = 2
+            if (reponseUser == Constantes.getQuestionsNovice()[position - 1].reponse) {
+                points++
+            }
             position++
             when{
                 position <= totalQuestions ->{
                     setQuestionNovice()
                 }else ->{
-                Toast.makeText(this, "Quiz terminé!", Toast.LENGTH_SHORT).show()
+                    sendIntentNovice()
                 }
             }
         }
         choix3.setOnClickListener {
             reponseUser = 3
+            if (reponseUser == Constantes.getQuestionsNovice()[position - 1].reponse) {
+                points++
+            }
             position++
             when{
                 position <= totalQuestions ->{
                     setQuestionNovice()
                 }else ->{
-                Toast.makeText(this, "Quiz terminé!", Toast.LENGTH_SHORT).show()
+                    sendIntentNovice()
                 }
             }
         }
         choix4.setOnClickListener {
             reponseUser = 4
+            if (reponseUser == Constantes.getQuestionsNovice()[position - 1].reponse) {
+                points++
+            }
             position++
             when{
                 position <= totalQuestions ->{
                     setQuestionNovice()
                 }else ->{
-                Toast.makeText(this, "Quiz terminé!", Toast.LENGTH_SHORT).show()
+                    sendIntentNovice()
                 }
             }
         }
@@ -122,48 +134,57 @@ class Quiz : AppCompatActivity() {
     private fun choixInter() {
         choix1.setOnClickListener {
             reponseUser = 1
-            /*if (reponseUser == listeQuestions!!.get(position - 1).reponse) {
+            if (reponseUser == Constantes.getQuestionsInter()[position - 1].reponse) {
                 points++
-            }*/
+            }
             position++
             when{
                 position <= totalQuestions ->{
                     setQuestionInter()
                 }else ->{
-                Toast.makeText(this, "Quiz terminé!", Toast.LENGTH_SHORT).show()
+                    sendIntentInter()
                 }
             }
         }
         choix2.setOnClickListener {
             reponseUser = 2
+            if (reponseUser == Constantes.getQuestionsInter()[position - 1].reponse) {
+                points++
+            }
             position++
             when{
                 position <= totalQuestions ->{
                     setQuestionInter()
                 }else ->{
-                Toast.makeText(this, "Quiz terminé!", Toast.LENGTH_SHORT).show()
+                    sendIntentInter()
                 }
             }
         }
         choix3.setOnClickListener {
             reponseUser = 3
+            if (reponseUser == Constantes.getQuestionsInter()[position - 1].reponse) {
+                points++
+            }
             position++
             when{
                 position <= totalQuestions ->{
                     setQuestionInter()
                 }else ->{
-                Toast.makeText(this, "Quiz terminé!", Toast.LENGTH_SHORT).show()
+                    sendIntentInter()
                 }
             }
         }
         choix4.setOnClickListener {
             reponseUser = 4
+            if (reponseUser == Constantes.getQuestionsInter()[position - 1].reponse) {
+                points++
+            }
             position++
             when{
                 position <= totalQuestions ->{
                     setQuestionInter()
                 }else ->{
-                Toast.makeText(this, "Quiz terminé!", Toast.LENGTH_SHORT).show()
+                    sendIntentInter()
                 }
             }
         }
@@ -172,50 +193,86 @@ class Quiz : AppCompatActivity() {
     private fun choixExpert() {
         choix1.setOnClickListener {
             reponseUser = 1
-            /*if (reponseUser == listeQuestions!!.get(position - 1).reponse) {
+            if (reponseUser == Constantes.getQuestionsExpert()[position - 1].reponse) {
                 points++
-            }*/
+            }
             position++
             when{
                 position <= totalQuestions ->{
                     setQuestionExpert()
                 }else ->{
-                Toast.makeText(this, "Quiz terminé!", Toast.LENGTH_SHORT).show()
+                    sendIntentExpert()
                 }
             }
         }
         choix2.setOnClickListener {
             reponseUser = 2
+            if (reponseUser == Constantes.getQuestionsExpert()[position - 1].reponse) {
+                points++
+            }
             position++
             when{
                 position <= totalQuestions ->{
                     setQuestionExpert()
                 }else ->{
-                Toast.makeText(this, "Quiz terminé!", Toast.LENGTH_SHORT).show()
+                    sendIntentExpert()
                 }
             }
         }
         choix3.setOnClickListener {
             reponseUser = 3
+            if (reponseUser == Constantes.getQuestionsExpert()[position - 1].reponse) {
+                points++
+            }
             position++
             when{
                 position <= totalQuestions ->{
                     setQuestionExpert()
                 }else ->{
-                Toast.makeText(this, "Quiz terminé!", Toast.LENGTH_SHORT).show()
+                    sendIntentExpert()
                 }
             }
         }
         choix4.setOnClickListener {
             reponseUser = 4
+            if (reponseUser == Constantes.getQuestionsExpert()[position - 1].reponse) {
+                points++
+            }
             position++
             when{
                 position <= totalQuestions ->{
                     setQuestionExpert()
                 }else ->{
-                Toast.makeText(this, "Quiz terminé!", Toast.LENGTH_SHORT).show()
+                    sendIntentExpert()
                 }
             }
         }
+    }
+
+    private fun sendIntentNovice() {
+        val intent = Intent(this, Resultat::class.java)
+        intent.putExtra("difficulte", "Novice")
+        intent.putExtra("points", points)
+        intent.putExtra("user", user)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun sendIntentInter() {
+        val intent = Intent(this, Resultat::class.java)
+        intent.putExtra("difficulte", "Intermédiaire")
+        intent.putExtra("points", points)
+        intent.putExtra("user", user)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun sendIntentExpert() {
+        val intent = Intent(this, Resultat::class.java)
+        intent.putExtra("difficulte", "Expert")
+        intent.putExtra("points", points)
+        intent.putExtra("user", user)
+        startActivity(intent)
+        finish()
     }
 }

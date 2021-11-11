@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Vous devez entrer votre nom!", Toast.LENGTH_SHORT).show()
             }else {
                 val intent = Intent(this, Menu::class.java)
-                intent.putExtra(Constantes.USER, nom_user.text.toString())
+                intent.putExtra("user", nom_user.text.toString())
                 startActivity(intent)
                 finish()
             }

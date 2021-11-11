@@ -2,8 +2,6 @@ package com.projetveille2quiz
 
 object Constantes {
 
-    const val USER: String = "username"
-
     fun getQuestionsNovice(): ArrayList<Question>{
         val listeQuestionsNovice = ArrayList<Question>()
 
@@ -142,7 +140,7 @@ object Constantes {
             "Novice",
             "Qui est l'auteur du Seigneur des anneaux?",
             "Terry Pratchett",
-            "J. R. R. Tolkie",
+            "J. R. R. Tolkien",
             "George R. R. Martin",
             "Neil Gaiman",
             2
