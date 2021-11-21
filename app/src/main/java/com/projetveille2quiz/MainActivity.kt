@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import io.github.muddz.styleabletoast.StyleableToast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         btn_menu.setOnClickListener {
             if (nom_user.text.toString().isEmpty()){
-                Toast.makeText(this, "Vous devez entrer votre nom!", Toast.LENGTH_SHORT).show()
+                StyleableToast.makeText(this, "Vous devez entrer votre nom!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }else {
                 val intent = Intent(this, Menu::class.java)
                 intent.putExtra("user", nom_user.text.toString())

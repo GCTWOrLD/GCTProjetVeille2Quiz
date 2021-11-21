@@ -3,8 +3,10 @@ package com.projetveille2quiz
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.os.Handler
+import android.os.Looper
 import android.widget.Toast
+import io.github.muddz.styleabletoast.StyleableToast
 import kotlinx.android.synthetic.main.activity_quiz.*
 
 class Quiz : AppCompatActivity() {
@@ -33,7 +35,6 @@ class Quiz : AppCompatActivity() {
             setQuestionExpert()
             choixExpert()
         }
-
     }
 
     private fun setQuestionNovice() {
@@ -77,13 +78,20 @@ class Quiz : AppCompatActivity() {
             reponseUser = 1
             if (reponseUser == Constantes.getQuestionsNovice()[position - 1].reponse) {
                 points++
+                StyleableToast.makeText(this, "Bravo!", Toast.LENGTH_SHORT, R.style.successToast).show();
+            } else {
+                StyleableToast.makeText(this, "Oops!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }
             position++
             when{
                 position <= totalQuestions ->{
-                    setQuestionNovice()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        setQuestionNovice()
+                    }, 2500)
                 }else ->{
-                    sendIntentNovice()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        sendIntentNovice()
+                    }, 2500)
                 }
             }
         }
@@ -91,13 +99,20 @@ class Quiz : AppCompatActivity() {
             reponseUser = 2
             if (reponseUser == Constantes.getQuestionsNovice()[position - 1].reponse) {
                 points++
+                StyleableToast.makeText(this, "Bravo!", Toast.LENGTH_SHORT, R.style.successToast).show();
+            } else {
+                StyleableToast.makeText(this, "Oops!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }
             position++
             when{
                 position <= totalQuestions ->{
-                    setQuestionNovice()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        setQuestionNovice()
+                    }, 2500)
                 }else ->{
-                    sendIntentNovice()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        sendIntentNovice()
+                    }, 2500)
                 }
             }
         }
@@ -105,13 +120,20 @@ class Quiz : AppCompatActivity() {
             reponseUser = 3
             if (reponseUser == Constantes.getQuestionsNovice()[position - 1].reponse) {
                 points++
+                StyleableToast.makeText(this, "Bravo!", Toast.LENGTH_SHORT, R.style.successToast).show();
+            } else {
+                StyleableToast.makeText(this, "Oops!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }
             position++
             when{
                 position <= totalQuestions ->{
-                    setQuestionNovice()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        setQuestionNovice()
+                    }, 2500)
                 }else ->{
-                    sendIntentNovice()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        sendIntentNovice()
+                    }, 2500)
                 }
             }
         }
@@ -119,13 +141,20 @@ class Quiz : AppCompatActivity() {
             reponseUser = 4
             if (reponseUser == Constantes.getQuestionsNovice()[position - 1].reponse) {
                 points++
+                StyleableToast.makeText(this, "Bravo!", Toast.LENGTH_SHORT, R.style.successToast).show();
+            } else {
+                StyleableToast.makeText(this, "Oops!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }
             position++
             when{
                 position <= totalQuestions ->{
-                    setQuestionNovice()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        setQuestionNovice()
+                    }, 2500)
                 }else ->{
-                    sendIntentNovice()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        sendIntentNovice()
+                    }, 2500)
                 }
             }
         }
@@ -136,13 +165,20 @@ class Quiz : AppCompatActivity() {
             reponseUser = 1
             if (reponseUser == Constantes.getQuestionsInter()[position - 1].reponse) {
                 points++
+                StyleableToast.makeText(this, "Bravo!", Toast.LENGTH_SHORT, R.style.successToast).show();
+            } else {
+                StyleableToast.makeText(this, "Oops!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }
             position++
             when{
                 position <= totalQuestions ->{
-                    setQuestionInter()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        setQuestionInter()
+                    }, 2500)
                 }else ->{
-                    sendIntentInter()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        sendIntentInter()
+                    }, 2500)
                 }
             }
         }
@@ -150,13 +186,20 @@ class Quiz : AppCompatActivity() {
             reponseUser = 2
             if (reponseUser == Constantes.getQuestionsInter()[position - 1].reponse) {
                 points++
+                StyleableToast.makeText(this, "Bravo!", Toast.LENGTH_SHORT, R.style.successToast).show();
+            } else {
+                StyleableToast.makeText(this, "Oops!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }
             position++
             when{
                 position <= totalQuestions ->{
-                    setQuestionInter()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        setQuestionInter()
+                    }, 2500)
                 }else ->{
-                    sendIntentInter()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        sendIntentInter()
+                    }, 2500)
                 }
             }
         }
@@ -164,13 +207,20 @@ class Quiz : AppCompatActivity() {
             reponseUser = 3
             if (reponseUser == Constantes.getQuestionsInter()[position - 1].reponse) {
                 points++
+                StyleableToast.makeText(this, "Bravo!", Toast.LENGTH_SHORT, R.style.successToast).show();
+            } else {
+                StyleableToast.makeText(this, "Oops!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }
             position++
             when{
                 position <= totalQuestions ->{
-                    setQuestionInter()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        setQuestionInter()
+                    }, 2500)
                 }else ->{
-                    sendIntentInter()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        sendIntentInter()
+                    }, 2500)
                 }
             }
         }
@@ -178,13 +228,20 @@ class Quiz : AppCompatActivity() {
             reponseUser = 4
             if (reponseUser == Constantes.getQuestionsInter()[position - 1].reponse) {
                 points++
+                StyleableToast.makeText(this, "Bravo!", Toast.LENGTH_SHORT, R.style.successToast).show();
+            } else {
+                StyleableToast.makeText(this, "Oops!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }
             position++
             when{
                 position <= totalQuestions ->{
-                    setQuestionInter()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        setQuestionInter()
+                    }, 2500)
                 }else ->{
-                    sendIntentInter()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        sendIntentInter()
+                    }, 2500)
                 }
             }
         }
@@ -195,13 +252,20 @@ class Quiz : AppCompatActivity() {
             reponseUser = 1
             if (reponseUser == Constantes.getQuestionsExpert()[position - 1].reponse) {
                 points++
+                StyleableToast.makeText(this, "Bravo!", Toast.LENGTH_SHORT, R.style.successToast).show();
+            } else {
+                StyleableToast.makeText(this, "Oops!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }
             position++
             when{
                 position <= totalQuestions ->{
-                    setQuestionExpert()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        setQuestionExpert()
+                    }, 2500)
                 }else ->{
-                    sendIntentExpert()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        sendIntentExpert()
+                    }, 2500)
                 }
             }
         }
@@ -209,13 +273,20 @@ class Quiz : AppCompatActivity() {
             reponseUser = 2
             if (reponseUser == Constantes.getQuestionsExpert()[position - 1].reponse) {
                 points++
+                StyleableToast.makeText(this, "Bravo!", Toast.LENGTH_SHORT, R.style.successToast).show();
+            } else {
+                StyleableToast.makeText(this, "Oops!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }
             position++
             when{
                 position <= totalQuestions ->{
-                    setQuestionExpert()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        setQuestionExpert()
+                    }, 2500)
                 }else ->{
-                    sendIntentExpert()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        sendIntentExpert()
+                    }, 2500)
                 }
             }
         }
@@ -223,13 +294,20 @@ class Quiz : AppCompatActivity() {
             reponseUser = 3
             if (reponseUser == Constantes.getQuestionsExpert()[position - 1].reponse) {
                 points++
+                StyleableToast.makeText(this, "Bravo!", Toast.LENGTH_SHORT, R.style.successToast).show();
+            } else {
+                StyleableToast.makeText(this, "Oops!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }
             position++
             when{
                 position <= totalQuestions ->{
-                    setQuestionExpert()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        setQuestionExpert()
+                    }, 2500)
                 }else ->{
-                    sendIntentExpert()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        sendIntentExpert()
+                    }, 2500)
                 }
             }
         }
@@ -237,13 +315,20 @@ class Quiz : AppCompatActivity() {
             reponseUser = 4
             if (reponseUser == Constantes.getQuestionsExpert()[position - 1].reponse) {
                 points++
+                StyleableToast.makeText(this, "Bravo!", Toast.LENGTH_SHORT, R.style.successToast).show();
+            } else {
+                StyleableToast.makeText(this, "Oops!", Toast.LENGTH_SHORT, R.style.failToast).show();
             }
             position++
             when{
                 position <= totalQuestions ->{
-                    setQuestionExpert()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        setQuestionExpert()
+                    }, 2500)
                 }else ->{
-                    sendIntentExpert()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        sendIntentExpert()
+                    }, 2500)
                 }
             }
         }

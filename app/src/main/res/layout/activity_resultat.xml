@@ -19,8 +19,25 @@
         android:text="Quiz App GCT"
         android:textColor="@color/purple_500"
         android:textSize="30sp"
-        android:textStyle="bold"/>
-
+        android:textStyle="bold"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="3.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="5.0"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Votre résultat"
+        android:textColor="@color/purple_500"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="3.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="5.0"/>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,17 +50,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="15dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="15dp"
-                android:text="Votre résultat"
-                android:textColor="@color/purple_500"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
-
             <TextView
                 android:id="@+id/res_user"
                 android:layout_width="match_parent"
@@ -97,7 +103,11 @@
         android:backgroundTint="@color/orange"
         android:text="Recommencer!"
         android:textSize="20sp"
-        android:textColor="@color/purple_500">
+        android:textColor="@color/purple_500"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="3.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="5.0">
     </Button>
 
 </LinearLayout>

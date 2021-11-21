@@ -13,4 +13,24 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="successToast">
+        <item name="stColorBackground">#94FFAB</item>
+        <item name="stTextColor">@color/black</item>
+        <item name="stTextBold">true</item>
+        <item name="stIconStart">@drawable/ic_baseline_check_24</item>
+        <item name="stStrokeColor">@color/black</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="stLength">SHORT</item>
+    </style>
+
+    <style name="failToast">
+        <item name="stColorBackground">#F5364F</item>
+        <item name="stTextColor">@color/black</item>
+        <item name="stTextBold">true</item>
+        <item name="stIconStart">@drawable/ic_baseline_clear_24</item>
+        <item name="stStrokeColor">@color/black</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="stLength">SHORT</item>
+    </style>
 </resources>

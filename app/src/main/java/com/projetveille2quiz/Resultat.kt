@@ -3,7 +3,6 @@ package com.projetveille2quiz
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_resultat.*
 
 class Resultat : AppCompatActivity() {
@@ -19,8 +18,7 @@ class Resultat : AppCompatActivity() {
         difficulte = intent.getStringExtra("difficulte")
         points = intent.getIntExtra("points", 0)
         user = intent.getStringExtra("user")
-
-        val img = ImageView(this)
+        val databaseHelper: DatabaseHelper = DatabaseHelper(this)
 
         if (points!!.toInt() >= 12) {
             res_user.text = "Bravo " + user + "!"
@@ -31,6 +29,10 @@ class Resultat : AppCompatActivity() {
         }
         res_diff.text = "Difficulté: " + difficulte
         res_score.text = points.toString() + " / 20"
+
+        val res = ResultatQuiz(1, user.toString(), points!!, difficulte.toString())
+
+        databaseHelper.addResultatQuiz(res)
 
         res_start.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)

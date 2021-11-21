@@ -18,7 +18,11 @@
         android:text="Quiz App GCT"
         android:textColor="@color/purple_500"
         android:textSize="30sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="3.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="5.0"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +38,11 @@
             android:text="Question"
             android:textSize="20sp"
             android:textColor="@color/black"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:shadowColor="#FFFFFF"
+            android:shadowDx="3.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="5.0"/>
         <Button
             android:id="@+id/choix1"
             android:layout_width="match_parent"
@@ -97,7 +105,11 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="Question 0/20"/>
+            android:text="Question 0/20"
+            android:shadowColor="#FFFFFF"
+            android:shadowDx="3.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="5.0"/>
     </LinearLayout>
 
 </LinearLayout>
